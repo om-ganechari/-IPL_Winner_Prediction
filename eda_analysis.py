@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("dataset.csv")
+df = pd.read_csv("ipl_colab.csv")
 
 print("Dataset Shape:", df.shape)
 print("\nDataset Info:")
@@ -19,3 +19,4 @@ if "winner" in df.columns:
 # Save quick summary
 df.describe(include='all').to_csv("eda_summary.csv")
 print("\nEDA Summary saved as eda_summary.csv")
+
