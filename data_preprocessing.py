@@ -3,7 +3,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 import os
 
-df = pd.read_csv("dataset.csv")
+df = pd.read_csv("ipl_colab.csv")
 
 # Drop irrelevant columns
 drop_cols = ["id", "date", "umpire1", "umpire2", "umpire3"]
@@ -27,3 +27,4 @@ df.to_csv("artifacts/processed_data.csv", index=False)
 joblib.dump(label_encoders, "artifacts/encoders.pkl")
 
 print("✅ Data preprocessing complete. Processed data & encoders saved.")
+
