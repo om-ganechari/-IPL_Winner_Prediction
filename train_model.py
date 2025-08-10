@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import os
 
-df = pd.read_csv("artifacts/processed_data.csv")
+df = pd.read_csv("artifacts/ipl_colab.csv")
 
 X = df.drop("winner", axis=1)
 y = df["winner"]
@@ -22,3 +22,4 @@ os.makedirs("artifacts", exist_ok=True)
 joblib.dump(model, "artifacts/model.pkl")
 
 print(f"✅ Model trained with accuracy: {accuracy:.2f}")
+
